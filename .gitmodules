@@ -1,0 +1,3 @@
+[submodule "src/airlog"]
+	path = src/airlog
+	url = https://github.com/keitax/airlog.git
