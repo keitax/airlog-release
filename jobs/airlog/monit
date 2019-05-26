@@ -1,0 +1,5 @@
+check process airlog
+  with pidfile /var/vcap/sys/run/airlog/pid
+  start program "/var/vcap/jobs/airlog/bin/start"
+  stop program "/var/vcap/jobs/airlog/bin/stop"
+  group vcap

@@ -1,0 +1,19 @@
+---
+name: airlog
+
+templates:
+  airlog.env.erb: airlog.env
+  pre-start: bin/pre-start
+  start: bin/start
+  stop: bin/stop
+
+properties:
+  airlog:
+    site_title:
+    footnote:
+    blog_dsn:
+    github_api:
+      post_repository_endpoint:
+
+packages:
+- airlog

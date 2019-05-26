@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu
+
+echo $$ > /var/vcap/sys/run/airlog.pid
+
+exec /var/vcap/packages/airlog/bin/airlog \
+  1> /var/vcap/sys/log/airlog/stdout.log \
+  2> /var/vcap/sys/log/airlog/stderr.log
