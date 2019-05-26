@@ -1,3 +1,12 @@
 set -eu
 
-install -m 744 airlog ${BOSH_INSTALL_TARGET}/bin
+tar -axf airlog.tgz
+
+for dir in assets templates
+do
+    install -m 755 -d ${BOSH_INSTALL_TARGET}/${dir}
+    install -m 644 ${dir}/* ${BOSH_INSTALL_TARGET}/${dir}/
+done
+
+install -m 755 -d ${BOSH_INSTALL_TARGET}/bin
+install -m 755 airlog ${BOSH_INSTALL_TARGET}/bin/

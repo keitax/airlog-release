@@ -2,8 +2,12 @@
 
 set -eu
 
-echo $$ > /var/vcap/sys/run/airlog.pid
+. /var/vcap/jobs/airlog/airlog.env
 
-exec /var/vcap/packages/airlog/bin/airlog \
-  1> /var/vcap/sys/log/airlog/stdout.log \
-  2> /var/vcap/sys/log/airlog/stderr.log
+echo $$ > /var/vcap/sys/run/airlog/pid
+
+cd /var/vcap/packages/airlog
+
+exec ./bin/airlog \
+  1>> /var/vcap/sys/log/airlog/stdout.log \
+  2>> /var/vcap/sys/log/airlog/stderr.log
