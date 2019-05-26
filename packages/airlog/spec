@@ -1,0 +1,8 @@
+---
+name: airlog
+
+dependencies: []
+
+files:
+- airlog/*
+- airlog/**/*
