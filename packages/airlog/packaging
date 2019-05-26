@@ -1,9 +1,3 @@
 set -eu
 
-pushd airlog
-
-go build ./cmd/airlog
-
 install -m 744 airlog ${BOSH_INSTALL_TARGET}/bin
-
-popd
