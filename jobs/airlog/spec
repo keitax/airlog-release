@@ -3,7 +3,6 @@ name: airlog
 
 templates:
   airlog.env.erb: airlog.env
-  pre-start: bin/pre-start
   start: bin/start
   stop: bin/stop
 
